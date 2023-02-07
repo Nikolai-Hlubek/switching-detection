@@ -47,7 +47,7 @@ import keras
 # In[2]:
 
 
-filename_out = 'intermediate/models#KeilE_success#Transformer.pkl'
+filename_out = 'models#KeilE_success#Transformer.pkl'
 
 
 # # Load data
@@ -55,13 +55,13 @@ filename_out = 'intermediate/models#KeilE_success#Transformer.pkl'
 # In[3]:
 
 
-with open('data/df_current.pkl', 'rb') as file:
+with open('df_current.pkl', 'rb') as file:
     df_current = pickle.load(file)
 
-with open('data/df_voltage.pkl', 'rb') as file:
+with open('df_voltage.pkl', 'rb') as file:
     df_voltage = pickle.load(file)
 
-with open('data/df_params.pkl', 'rb') as file:
+with open('df_params.pkl', 'rb') as file:
     df_params = pickle.load(file)
 
 
