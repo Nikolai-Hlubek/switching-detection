@@ -1,0 +1,12 @@
+- step:
+    name: train-transformer
+    image: python:3.6
+    command:
+    - pip install -r requirements.txt
+    - python ./test_transformer.py {parameters}
+    inputs:
+    - name: dataset
+      default:
+      - datum://01862c38-871b-6336-42ea-1909c8a09574 df_params.pkl
+      - datum://01862c38-8498-6d8f-f3ac-4f35ce4f2da9 df_current.pkl
+      optional: false
