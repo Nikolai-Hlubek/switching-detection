@@ -17,18 +17,13 @@ import numpy as np
 import pandas as pd
 
 # Static plots
-get_ipython().run_line_magic('matplotlib', 'inline')
 import matplotlib.pyplot as plt
 import matplotlib
 
-# Dynamic plots
-import plotly.express as px
 
 # Filtering
 import scipy.signal
 
-# Jupyter display infrastructure
-import IPython.display
 
 # Machine learning library
 import sklearn
@@ -194,7 +189,6 @@ def plot_misclassifications(y_cv, y=y):
     ax.set_xlabel('time (ms)')
     ax.set_ylabel('current (mA)')
 
-    IPython.display.display(df_params.loc[failures_idx])
 
 
 # # Model storage
