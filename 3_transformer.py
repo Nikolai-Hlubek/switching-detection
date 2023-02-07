@@ -50,13 +50,8 @@ filename_out = 'models#KeilE_success#Transformer.pkl'
 # In[3]:
 
 
-# Get the location of Valohai inputs directory
-VH_INPUTS_DIR = os.getenv('VH_INPUTS_DIR', '.inputs')
- 
-# Get the path to your individual inputs file
-# e.g. /valohai/inputs/<input-name>/<filename.ext<
-infile_current = os.path.join(VH_INPUTS_DIR, 'df_current.pkl')
-infile_params = os.path.join(VH_INPUTS_DIR, 'df_params.pkl')
+infile_current = os.path.join('/valohai/inputs/dataset', 'df_current.pkl')
+infile_params = os.path.join('/valohai/inputs/dataset', 'df_params.pkl')
 
 print('data locations')
 print(infile_current)
