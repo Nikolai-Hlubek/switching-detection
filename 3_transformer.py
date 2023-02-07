@@ -50,13 +50,22 @@ filename_out = 'models#KeilE_success#Transformer.pkl'
 # In[3]:
 
 
-with open('df_current.pkl', 'rb') as file:
+# Get the location of Valohai inputs directory
+VH_INPUTS_DIR = os.getenv('VH_INPUTS_DIR', '.inputs')
+ 
+# Get the path to your individual inputs file
+# e.g. /valohai/inputs/<input-name>/<filename.ext<
+infile_current = os.path.join(VH_INPUTS_DIR, 'df_current.pkl')
+infile_params = os.path.join(VH_INPUTS_DIR, 'df_params.pkl')
+
+print('data locations')
+print(infile_current)
+print(infile_params)
+
+with open(infile_current, 'rb') as file:
     df_current = pickle.load(file)
 
-with open('df_voltage.pkl', 'rb') as file:
-    df_voltage = pickle.load(file)
-
-with open('df_params.pkl', 'rb') as file:
+with open(infile_params, 'rb') as file:
     df_params = pickle.load(file)
 
 
